@@ -37,3 +37,11 @@ This could be approached in a few different ways:
 ---
 
 This project is part of a bigger push toward using data and machine learning to improve industrial processes — especially in precision manufacturing like engine building.
+## Running Tests
+
+Install pytest and run:
+
+```bash
+pytest
+```
+
