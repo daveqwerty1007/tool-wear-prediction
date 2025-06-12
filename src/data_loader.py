@@ -50,4 +50,4 @@ def load_vicomtech_data(raw_path='data/raw/VicomtechToolWearData.csv', selected_
 if __name__ == "__main__":
     df = load_vicomtech_data()
     print("✅ Data loaded:", df.shape)
-    print(df.head())
+
