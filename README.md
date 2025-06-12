@@ -8,14 +8,12 @@ We want to know how worn each cutting tool is so we can swap it out before it ru
 When a tool fails unexpectedly, it wastes time and money. If we can spot the wear early, the line keeps humming and we avoid a lot of headaches.
 
 ## Approaches we can try
-
 - **Classification** – tag a tool as Healthy, Worn, or Broken
 - **Regression** – estimate the remaining life in hours or the amount of wear
 - **Time Series** – track how wear progresses job after job
 - **Anomaly Detection** – catch weird patterns we didn't expect
 
 ## What data do we have to work with?
-
 - Tool ID and type
 - Which machining process was used
 - Vibration, force, acoustic emission, and temperature readings
@@ -23,7 +21,6 @@ When a tool fails unexpectedly, it wastes time and money. If we can spot the wea
 - Measurements of wear such as flank wear or cracks
 
 ## What do we want out?
-
 - A wear level for each tool
 - A friendly label like "Needs Replacement"
 - Maybe an estimate of remaining life
