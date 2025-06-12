@@ -1,39 +1,51 @@
 # Tool Wear Prediction in Engine Manufacturing
 
-## Project Goal
+## What are we trying to do?
 
-The goal of this project is to analyze and model tooling wear and tear during engine part manufacturing. Using sensor data and usage logs, we want to predict the condition of cutting tools — whether they’re still usable, worn out, or close to failure — and potentially estimate how much life they have left.
+We want to know how worn each cutting tool is so we can swap it out before it ruins a part. We'll crunch the sensor data coming off the machines and build models that tell us if a tool is still healthy or on its last legs.
 
-## Why This Matters
+## Why should anyone care?
 
-Tool wear directly affects part quality, machine downtime, and production costs. By predicting wear before failure, manufacturers can:
-- Replace tools at the right time (not too early, not too late)
-- Avoid unexpected breakdowns or poor-quality parts
-- Reduce tooling costs and downtime
-- Move toward smarter, predictive maintenance workflows
+When a tool fails unexpectedly, it wastes time and money. If we can spot the wear early, the line keeps humming and we avoid a lot of headaches.
 
-## Problem Type
+## Approaches we can try
 
-This could be approached in a few different ways:
-- **Classification**: Label tools as Healthy / Worn / Broken
-- **Regression**: Predict the amount of wear or remaining tool life
-- **Time Series**: Forecast wear progression based on usage
-- **Anomaly Detection**: Spot weird/unexpected wear patterns
+- **Classification** – tag a tool as Healthy, Worn, or Broken
+- **Regression** – estimate the remaining life in hours or the amount of wear
+- **Time Series** – track how wear progresses job after job
+- **Anomaly Detection** – catch weird patterns we didn't expect
 
-## Input Data (What We'll Use)
+## What data do we have to work with?
 
-- Tool type and ID
-- Machining process (milling, drilling, etc.)
-- Sensor readings like vibration, force, AE (acoustic emission), and temperature
-- Machine parameters (spindle speed, feed rate, etc.)
-- Historical wear measurements (flank wear, cracks, etc.)
+- Tool ID and type
+- Which machining process was used
+- Vibration, force, acoustic emission, and temperature readings
+- Machine settings like spindle speed and feed rate
+- Measurements of wear such as flank wear or cracks
 
-## Expected Outputs
+## What do we want out?
 
-- Wear level (numerical or categorical)
-- Tool condition label (Healthy / Needs Replacement / Critical)
-- Estimated remaining tool life (optional)
+- A wear level for each tool
+- A friendly label like "Needs Replacement"
+- Maybe an estimate of remaining life
 
 ---
 
-This project is part of a bigger push toward using data and machine learning to improve industrial processes — especially in precision manufacturing like engine building.
+This repo is one step toward smarter, predictive maintenance in manufacturing.
+
+## Notebooks
+
+The `notebooks/` folder contains a simple workflow:
+
+- `01_EDA.ipynb` – peek at the data, plot histograms, and check for outliers
+- `02_Features.ipynb` – scale values, create a few helper features, and save a cleaned CSV
+- `03_Modeling.ipynb` – try a random-forest classifier and a Ridge regressor
+
+## Running the tests
+
+Install `pytest` and run:
+
+```bash
+pytest
+```
+
