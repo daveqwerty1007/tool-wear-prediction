@@ -1,6 +1,7 @@
 # Tool Wear Prediction in Engine Manufacturing
 
 ## What are we trying to do?
+
 We want to know how worn each cutting tool is so we can swap it out before it ruins a part. We'll crunch the sensor data coming off the machines and build models that tell us if a tool is still healthy or on its last legs.
 
 ## Why should anyone care?
@@ -25,6 +26,7 @@ When a tool fails unexpectedly, it wastes time and money. If we can spot the wea
 - Maybe an estimate of remaining life
 
 ---
+
 This repo is one step toward smarter, predictive maintenance in manufacturing.
 
 ## Notebooks
