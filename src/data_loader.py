@@ -1,9 +1,10 @@
 import pandas as pd
 import os
 
-def load_vicomtech_data(raw_path='data/raw/VicomtechToolWearData.csv', selected_only=True):
+def load_vicomtech_data(raw_path='data/raw/VicomtechToolWearData.csv', selected_only=False):
     """
-    Load and clean the Vicomtech tool wear dataset with renamed columns.
+    Load the Vicomtech dataset and perform basic cleaning. Columns are
+    renamed for clarity and rows without a flank wear label are dropped.
 
     Parameters:
         raw_path (str): Path to the CSV dataset
@@ -49,4 +50,4 @@ def load_vicomtech_data(raw_path='data/raw/VicomtechToolWearData.csv', selected_
 if __name__ == "__main__":
     df = load_vicomtech_data()
     print("✅ Data loaded:", df.shape)
-    print(df.head())
+
