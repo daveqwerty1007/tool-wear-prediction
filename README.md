@@ -32,7 +32,7 @@ This repo is one step toward smarter, predictive maintenance in manufacturing.
 ## Notebooks
 The `notebooks/` folder contains a simple workflow:
 - `01_EDA.ipynb` – peek at the data, plot histograms, and check for outliers
-- `02_Features.ipynb` – scale values, create a few helper features, and save a cleaned CSV
+- `02_Features.ipynb` – scale values, create ratios and differences for the sensor readings, then save a cleaned CSV
 - `03_Modeling.ipynb` – try a random‑forest classifier and a Ridge regressor
 
 ## Data
