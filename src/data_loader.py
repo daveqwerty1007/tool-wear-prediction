@@ -18,6 +18,7 @@ def load_vicomtech_data(raw_path='../data/raw/VicomtechToolWearData.csv', select
         raise FileNotFoundError(f"File not found: {raw_path}")
 
     df = pd.read_csv(raw_path)
+    # remove leading/trailing spaces from column headers
     df.columns = df.columns.str.strip()
 
     # Rename common columns for easier access
@@ -31,6 +32,9 @@ def load_vicomtech_data(raw_path='../data/raw/VicomtechToolWearData.csv', select
         'Vb': 'flank_wear'
     }
     df.rename(columns={k: v for k, v in rename_map.items() if k in df.columns}, inplace=True)
+
+    # normalize column names to lower case for consistency
+    df.columns = df.columns.str.lower()
 
     # Drop rows with no flank wear label
     if 'flank_wear' in df.columns:
