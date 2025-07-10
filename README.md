@@ -39,9 +39,19 @@ The `notebooks/` folder contains a simple workflow:
 Raw CSV files live under `data/raw/`. They aren't included here. Grab the original
 Vicomtech Tool Wear dataset from their repository or fork and drop the CSV in that folder.
 
-## Running the tests
-Install the dependencies and run `pytest`:
+## Installation
+Install the Python dependencies with `pip`:
 ```bash
 pip install -r requirements.txt
+```
+Alternatively you can create a conda environment:
+```bash
+conda env create -f environment.yml
+conda activate tool-wear-prediction
+```
+
+## Running the tests
+After installing the dependencies, run the tests with:
+```bash
 pytest -q
 ```
