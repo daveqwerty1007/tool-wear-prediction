@@ -36,8 +36,10 @@ The `notebooks/` folder contains a simple workflow:
 - `03_Modeling.ipynb` – try a random‑forest classifier and a Ridge regressor
 
 ## Data
-Raw CSV files live under `data/raw/`. They aren't included here. Grab the original
-Vicomtech Tool Wear dataset from their repository or fork and drop the CSV in that folder.
+Raw CSV files live under `data/raw/`, but the large dataset isn't part of this
+repository. Download the original Vicomtech Tool Wear dataset from their
+[`dataset-machine-tool-wear`](https://github.com/Vicomtech/dataset-machine-tool-wear)
+repository and place the CSV in `data/raw/` as `VicomtechToolWearData.csv`.
 
 ## Running the tests
 Install the dependencies and run `pytest`:

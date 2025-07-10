@@ -1,3 +1,4 @@
-The original Vicomtech Tool Wear dataset isn't included here.
-Download the CSV from the official repository or your own fork and place it in
-this folder as `VicomtechToolWearData.csv`.
+The original Vicomtech Tool Wear dataset is not stored in this repository.
+Download `VicomtechToolWearData.csv` from the
+[Vicomtech/dataset-machine-tool-wear](https://github.com/Vicomtech/dataset-machine-tool-wear)
+repository and place it in this folder.
