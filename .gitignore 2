@@ -1,9 +1,0 @@
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
-
-# Ignore data files except the placeholder README
-/data/*
-!/data/raw/
-!/data/raw/README.md
-
